@@ -1,0 +1,6 @@
+PyMySQL
+cryptography
+boto3
+elasticsearch>=5.0.0,<6.0.0
+requests_aws4auth
+requests

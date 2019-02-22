@@ -1,0 +1,65 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Exampe API
+
+  '
+Parameters:
+  AppName:
+    Type: String
+    Default: example-api
+    Description: App Name
+  AppEnv:
+    Type: String
+    Default: staging
+    AllowedValues:
+    - staging
+    - production
+    Description: App Env
+  BillingRef:
+    Type: String
+    Default: PROJECT-FOO
+Globals:
+  Function:
+    Runtime: python3.6
+    Timeout: 180
+    MemorySize: 256
+    Environment:
+      Variables:
+        AWS_ENVIRONMENT:
+          Fn::Sub: ${AppEnv}
+        VERSION: 2
+Resources:
+  ExampleAPI:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: main.hello
+      Runtime: python3.6
+      CodeUri: s3://nutile-sam/sam-build/59d9558265bea01d4bae445c458a40cd
+      FunctionName:
+        Fn::Sub: ${AppName}-example-${AppEnv}
+      MemorySize: 128
+      Tags:
+        billing_ref:
+          Fn::Sub: ${BillingRef}
+      Policies:
+      - AWSLambdaExecute
+      - AWSLambdaVPCAccessExecutionRole
+      Environment:
+        Variables:
+          AppEnv:
+            Ref: AppEnv
+          AppName:
+            Ref: AppName
+      Events:
+        PageCount:
+          Type: Api
+          Properties:
+            Path: /api/example
+            RestApiId:
+              Ref: RMMAPIGateway
+            Method: get
+  RMMAPIGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      Cors: '''*'''
