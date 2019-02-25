@@ -59,6 +59,29 @@ Resources:
             RestApiId: !Ref RMMAPIGateway
             Method: get
 
+  # ExampleCron:
+  #   Type: AWS::Serverless::Function
+  #   Properties:
+  #     Handler: main.cron
+  #     Runtime: python3.6
+  #     CodeUri: .
+  #     FunctionName: !Sub ${AppName}-cron-${AppEnv}
+  #     MemorySize: 128
+  #     Tags:
+  #       billing_ref: !Sub ${BillingRef}
+  #     Policies:
+  #       - AWSLambdaExecute
+  #       - AWSLambdaVPCAccessExecutionRole
+  #     Environment:
+  #       Variables:
+  #         AppEnv: !Ref AppEnv
+  #         AppName: !Ref AppName
+  #     Events:
+  #       Timer:
+  #         Type: Schedule
+  #         Properties:
+  #           Schedule: rate(5 minutes)
+
   RMMAPIGateway:
     Type: AWS::Serverless::Api
     Properties:

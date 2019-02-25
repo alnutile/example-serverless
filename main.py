@@ -14,6 +14,11 @@ def response(message, status_code):
     }
 
 
+def cron(event, context):
+    """ this is an example """
+    print("Hello")
+
+
 def hello(event, context):
     """ this is an example """
     foo = Foo()

@@ -1,0 +1,78 @@
+{
+  "resource": "/api/example",
+  "path": "/api/example",
+  "httpMethod": "GET",
+  "headers": {
+    "Accept": "* /*",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-Country": "US",
+    "Host": "u5ueepurjb.execute-api.us-east-1.amazonaws.com",
+    "User-Agent": "insomnia/6.3.2",
+    "Via": "1.1 73a52047a4b5d0888cd6da66a23c4762.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "ukSrpi1UWegY2ii9tY7COBqnxyPRDL-v-yMWtP0UwcVtTOhyfGjBDQ==",
+    "X-Amzn-Trace-Id": "Root=1-5c7340c8-1c32d0c4464bb22c585be7dc",
+    "X-Forwarded-For": "73.17.136.201, 52.46.29.44",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "multiValueHeaders": {
+    "Accept": ["*/*"],
+    "CloudFront-Forwarded-Proto": ["https"],
+    "CloudFront-Is-Desktop-Viewer": ["true"],
+    "CloudFront-Is-Mobile-Viewer": ["false"],
+    "CloudFront-Is-SmartTV-Viewer": ["false"],
+    "CloudFront-Is-Tablet-Viewer": ["false"],
+    "CloudFront-Viewer-Country": ["US"],
+    "Host": ["u5ueepurjb.execute-api.us-east-1.amazonaws.com"],
+    "User-Agent": ["insomnia/6.3.2"],
+    "Via": ["1.1 73a52047a4b5d0888cd6da66a23c4762.cloudfront.net (CloudFront)"],
+    "X-Amz-Cf-Id": ["ukSrpi1UWegY2ii9tY7COBqnxyPRDL-v-yMWtP0UwcVtTOhyfGjBDQ=="],
+    "X-Amzn-Trace-Id": ["Root=1-5c7340c8-1c32d0c4464bb22c585be7dc"],
+    "X-Forwarded-For": ["73.17.136.201",
+      "52.46 .29 .44"
+    ],
+    "X-Forwarded-Port": ["443"],
+    "X-Forwarded-Proto": ["https"]
+  },
+  "queryStringParameters": {
+    "bar": "boo"
+  },
+  "multiValueQueryStringParameters": "",
+  "pathParameters": "",
+  "stageVariables": "",
+  "requestContext": {
+    "resourceId": "iv7fbz",
+    "resourcePath": "/api/example",
+    "httpMethod": "GET",
+    "extendedRequestId": "VocPXEZoIAMFgCw=",
+    "requestTime": "25/Feb/2019: 01: 11: 36 +0000",
+    "path": "/Prod/api/example",
+    "accountId": "424176566308",
+    "protocol": "HTTP/1.1",
+    "stage": "Prod",
+    "domainPrefix": "u5ueepurjb",
+    "requestTimeEpoch": 1551057096784,
+    "requestId": "4c4e4ed8-389a-11e9-967e-f9dafc12d8d7",
+    "identity": {
+      "cognitoIdentityPoolId": "",
+      "accountId": "",
+      "cognitoIdentityId": "",
+      "caller": "",
+      "sourceIp": "73.17.136.201",
+      "accessKey": "",
+      "cognitoAuthenticationType": "",
+      "cognitoAuthenticationProvider": "",
+      "userArn": "",
+      "userAgent": "insomnia/6.3.2",
+      "user": ""
+    },
+    "domainName": "u5ueepurjb.execute-api.us-east-1.amazonaws.com",
+    "apiId": "u5ueepurjb"
+  },
+  "body": "",
+  "isBase64Encoded": "false"
+}
